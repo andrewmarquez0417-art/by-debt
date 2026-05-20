@@ -1,0 +1,268 @@
+:root {
+  --primary-color: #4361ee;
+  --secondary-color: #3f37c9;
+  --accent-color: #4cc9f0;
+  --light-color: #f8f9fa;
+  --dark-color: #212529;
+  --success-color: #4bb543;
+  --danger-color: #ff3333;
+  --warning-color: #ffc107;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  color: var(--dark-color);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 2rem 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.header h1 {
+  font-weight: 600;
+  color: var(--primary-color);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-bottom: 1.5rem;
+  background-color: white;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background-color: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  font-weight: 600;
+  padding: 1rem 1.5rem;
+  border-radius: 10px 10px 0 0 !important;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.table {
+  margin-bottom: 0;
+}
+
+.table th {
+  font-weight: 600;
+  background-color: var(--light-color);
+  border-top: none;
+}
+
+.table td,
+.table th {
+  vertical-align: middle;
+  padding: 1rem;
+}
+
+.badge {
+  font-weight: 500;
+  padding: 0.35em 0.65em;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.btn-success {
+  background-color: var(--success-color);
+  border-color: var(--success-color);
+}
+
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.nav-tabs {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.nav-tabs .nav-link {
+  color: var(--dark-color);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+}
+
+.nav-tabs .nav-link.active {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  background-color: transparent;
+}
+
+.nav-tabs .nav-link:hover:not(.active) {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.total-display {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  font-weight: 600;
+  color: var(--primary-color);
+  display: inline-block;
+}
+
+.filter-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.form-select,
+.form-control {
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.form-select:focus,
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.25rem rgba(67, 97, 238, 0.25);
+}
+
+.modal-header {
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 10px 10px 0 0 !important;
+}
+
+.modal-title {
+  font-weight: 600;
+}
+
+.btn-close {
+  filter: invert(1);
+}
+
+/* Circular Progress Indicator */
+.progress-circle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: conic-gradient(var(--primary-color) 0%, #e0e0e0 0%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-circle::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.progress-circle span {
+  position: relative;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--dark-color);
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filter-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .table td,
+  .table th {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .nav-tabs .nav-link {
+    padding: 0.5rem 1rem;
+  }
+
+  .progress-circle {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 1rem 0.5rem;
+  }
+
+  .card-header {
+    padding: 0.75rem;
+  }
+
+  .table td,
+  .table th {
+    padding: 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .badge {
+    font-size: 0.75rem;
+  }
+
+  .progress-circle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .progress-circle span {
+    font-size: 0.7rem;
+  }
+}
